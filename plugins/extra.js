@@ -128,7 +128,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'molu ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+    MyPnky.addCommand({pattern: 'alexa ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api-sv2.simsimi.net/v2/?text=${match[1]}&lc=ml&cf=true`;
 	try {
