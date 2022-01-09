@@ -69,7 +69,7 @@ Asena.addCommand({pattern: 'ski ?(.*)', fromMe: wk, dontAddCommandList: true}, (
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -90,7 +90,7 @@ Asena.addCommand({pattern: 'fabric ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -111,7 +111,7 @@ Asena.addCommand({pattern: 'beach ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -132,7 +132,7 @@ Asena.addCommand({pattern: 'bpink ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -153,7 +153,7 @@ Asena.addCommand({pattern: 'catwindow ?(.*)', fromMe: wk, dontAddCommandList: tr
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -174,7 +174,7 @@ Asena.addCommand({pattern: 'toxic ?(.*)', fromMe: wk, dontAddCommandList: true},
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
@@ -195,7 +195,7 @@ Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*WHITEDEVIL*' })
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: '*Made by Alexa 👸*' })
               })
           } catch(err) { 
               console.log(err)
