@@ -420,7 +420,7 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
         });
     }));
 
-    MyPnky.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+    MyPnky.addCommand({pattern: 'yts ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
