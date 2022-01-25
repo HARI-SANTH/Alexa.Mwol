@@ -15,6 +15,7 @@ const googleTTS = require('google-translate-tts');
 const { MessageType, Mimetype, MessageOptions } = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('voicy');
+const { AfnanPLK, addplk } = require("./sql/tryplk");
 const conf = require('../config');
 const axios = require('axios')
 const axiosdef = require("axios").default;
@@ -65,7 +66,8 @@ const convertToWav = file => {
 }
 if (conf.STANDPLK == 'off' || conf.STANDPLK == 'OFF') {
 MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('alexa') && conf.TALKING_PINKY !== 'true') {        
+	var plkser = await addplk(message.jid);
+    if (message.message.startsWith('pinky') && !plkser.message.includes('{pinky}')) {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
@@ -94,7 +96,8 @@ MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
     }
 }));
 MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.TALKING_PINKY == 'true' && ((!message.jid.includes('g.us')) || (message.jid.includes('g.us') && 
+	var plkser = await addplk(message.jid);
+        if (plkser.message.includes('{pinky}') && ((!message.jid.includes('g.us')) || (message.jid.includes('g.us') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('g.us') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -246,19 +249,19 @@ if (conf.LANG == 'TR') {
 if (conf.LANG == 'EN') {
     fulleva_dsc = 'Activates full functional Pinky features. Turn your account into a ai chatbot!'
     already_on = 'alexa artificial intelligence is already fully functional.'
-    already_off = 'Alexa artificial intelligence is currently running semi-functional.'
-    succ_on = 'Alexa Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'Alexa Set to Semi-Functional! Please wait a bit! ☑️'
+    already_off = 'Pinky artificial intelligence is currently running semi-functional.'
+    succ_on = 'Pinky Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Pinky Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'ML') {
     fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ pinky സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
-    already_on = 'pinky കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
-    already_off = 'pinky AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
-    succ_on = 'pinky പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
+    already_on = 'alexa കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
+    already_off = 'alexa AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
+    succ_on = 'alexa പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി pinky സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-MyPnky.addCommand({ pattern: 'alexa ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.alexa on / off' }, (async (message, match) => {
+MyPnky.addCommand({ pattern: 'alexa ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.pinky on / off' }, (async (message, match) => {
     var pinky_status = `${conf.TALKING_PINKY}`
     if (match[1] == 'on') {
         if (pinky_status == 'true') {
