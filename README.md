@@ -21,7 +21,7 @@ Project created by <a href="https://github.com/HARI-SANTH">Hari</a> to make it p
 ----
 
   <p align="center">
-  <a href="https://github.com/HARI-SANTH/AlexaV1 ">
+  <a href="https://github.com/HARI-SANTH/Alexa_Mwol ">
     
 
 
@@ -30,7 +30,7 @@ Project created by <a href="https://github.com/HARI-SANTH">Hari</a> to make it p
 
   ### Simple Method
   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HARI-SANTH/Pinky)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/HARI-SANTH/Alexa_Mwol)
 
 
 
