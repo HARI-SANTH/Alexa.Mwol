@@ -155,7 +155,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
-	    var afn_plk_ = '```⌚ Time :' + plk_say + '```\n```🗓️ Date :' + plk_here + '```'
+	    var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
 
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
@@ -180,7 +180,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
            var plk_here = new Date().toLocaleDateString(get_localized_date)
-	       var afn_plk_ = '```⌚ Time :' + plk_say + '```\n```🗓️ Date :' + plk_here + '```'
+	       var afn_plk_ = '```⏱ Time :' + plk_say + '```\n```📅 Date :' + plk_here + '```'
              var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {		    
                 if (gb.message.includes('{pp}')) {
@@ -264,6 +264,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         if (command.deleteCommand && msg.key.fromMe) {
                             await whats.delete(); 
                         }
+	if (config.NOLOG == 'true') {
                         try {
                             await command.function(whats, match);
                         } catch (error) {
@@ -276,9 +277,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '__ALEXA_😿😿_[error] ' +
-                                    '\n\n*🤒 ' + error + '*\n'
+                                await conn.sendMessage(conn.user.jid, '__PINKYBOT_☠☠_[error] ' +
+                                    '\n\n*👻 ' + error + '*\n'
                                     , MessageType.text);
+			      }
                             }
                         }
                     }
