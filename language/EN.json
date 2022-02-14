@@ -77,7 +77,7 @@
             "MUST_TEXT": "```Please reply to any message```"
         },
         "heroku": {
-            "RESTART_DESC": "Restart pinky",
+            "RESTART_DESC": "Restart alexa",
             "RESTART_MSG": "_Alexa restarting...🙃_",
             "SHUTDOWN_DESC": "Shutdown pinky",
             "SHUTDOWN_MSG": "```Shutting down ⛔```",
