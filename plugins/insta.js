@@ -1,4 +1,4 @@
-const MyPnky = require('../events');
+const Myalxa = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const Config = require('../config');
 const axios = require('axios')
@@ -8,7 +8,7 @@ const instagram = async (url, key) => {
 }
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
-MyPnky.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: "Downloads from instagaram", dontAddCommandList: true }, async (message, match) => { 
+Myalxa.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: "Downloads from instagaram", dontAddCommandList: true }, async (message, match) => { 
     const { status, type, data } = await instagram(match[1], 'julie')
     if (!status) return await message.sendMessage('not found')
     await message.client.sendMessage(message.jid, LOAD_ING, MessageType.text, { quoted: message.data });
@@ -19,7 +19,7 @@ MyPnky.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: "Downloads from 
 }
 else if (Config.WORKTYPE == 'public') {
 
-        MyPnky.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: "Downloads from instagaram", dontAddCommandList: true }, async (message, match) => { 
+        Myalxa.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: "Downloads from instagaram", dontAddCommandList: true }, async (message, match) => { 
             const { status, type, data } = await instagram(match[1], 'alexa')
             if (!status) return await message.sendMessage('not found')
             await message.client.sendMessage(message.jid, LOAD_ING, MessageType.text, { quoted: message.data });
